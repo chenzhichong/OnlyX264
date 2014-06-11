@@ -23,13 +23,13 @@ int main()
 	int m_width=Width;//宽，根据实际情况改
 	int m_height=Height;//高s
 	//文件下载地址：http://trace.eas.asu.edu/yuv/
-	FILE*fyuv=fopen("20140611192434859_Sequence.yuv","rb");
-	FILE*f264=fopen("20140611192434859_Sequence.h264","wb");
+	FILE*fyuv=fopen("20140611203748920_Sequence.yuv","rb");
+	FILE*f264=fopen("20140611203748920_Sequence.h264","wb");
 	if (fyuv==NULL||f264==NULL){
 		printf("file err\n");
 		return 0;
 	}
-	/*
+
 	x264_param_default(&param);//设置默认参数具体见common/common.c
 	int yuvsize=m_height*m_width*3/2;
 	param.i_width=m_width;
@@ -40,24 +40,24 @@ int main()
 	param.b_repeat_headers=0;//关键帧前面是否放sps跟pps帧，0 否 1，放	
 //	param.analyse.i_subpel_refine=7;//压缩级别1~7
 //	param.i_log_level=X264_LOG_NONE;//设置显示信息级别
-*/
+
 	//==============================================================
-	pX264Param = &param;
-	int yuvsize=m_height*m_width*3/2;
+	////pX264Param = &param;
+	////int yuvsize=m_height*m_width*3/2;
 	//* 使用默认参数，在这里因为我的是实时网络传输，所以我使用了zerolatency的选项，使用这个选项之后就不会有delayed_frames，如果你使用的不是这样的话，还需要在编码完成之后得到缓存的编码帧   
-	x264_param_default_preset(pX264Param, "ultrafast"/*"veryfast"*/, "zerolatency");  
+	////x264_param_default_preset(pX264Param, "ultrafast"/*"veryfast"*/, "zerolatency");  
 
 	//* cpuFlags   
-	pX264Param->i_threads  = X264_THREADS_AUTO/*X264_SYNC_LOOKAHEAD_AUTO*/;//* 取空缓冲区继续使用不死锁的保证.  
-	pX264Param->i_log_level = X264_LOG_NONE; 
+	////pX264Param->i_threads  = X264_THREADS_AUTO/*X264_SYNC_LOOKAHEAD_AUTO*/;//* 取空缓冲区继续使用不死锁的保证.  
+	////pX264Param->i_log_level = X264_LOG_NONE; 
 	//* 视频选项      
-	pX264Param->i_width   = Width; //* 要编码的图像宽度.   
-	pX264Param->i_height  = Height; //* 要编码的图像高度   
+	////pX264Param->i_width   = Width; //* 要编码的图像宽度.   
+	////pX264Param->i_height  = Height; //* 要编码的图像高度   
 	//pX264Param->i_frame_total = 0; //* 编码总帧数.不知道用0.   
 	//pX264Param->i_keyint_max = 10;   
 
 	//* 流参数   
-	pX264Param->i_bframe  = 0;  
+	////pX264Param->i_bframe  = 0;  
 // 	pX264Param->b_open_gop  = 0;  
 // 	pX264Param->i_bframe_pyramid = 0;  
 // 	pX264Param->i_bframe_adaptive = 0; 
@@ -69,8 +69,8 @@ int main()
 	//pX264Param->rc.i_bitrate = 1024 * 10;//* 码率(比特率,单位Kbps)  
 
 	//* muxing parameters   
-	pX264Param->i_fps_den  = 1; //* 帧率分母   
-	pX264Param->i_fps_num  = 25;//* 帧率分子   
+	////pX264Param->i_fps_den  = 1; //* 帧率分母   
+	////pX264Param->i_fps_num  = 25;//* 帧率分子   
 // 	pX264Param->i_timebase_den = pX264Param->i_fps_num;  
 // 	pX264Param->i_timebase_num = pX264Param->i_fps_den;  
 	/*
@@ -170,7 +170,7 @@ int main()
 	*/
 	//限制输出文件的profile。这个参数将覆盖其它所有值，此选项能保证输出profile兼容的视频流。
 	//如果使用了这个选项，将不能进行无损压缩。可选：baseline，main，high
-	x264_param_apply_profile(pX264Param, "baseline");
+	////x264_param_apply_profile(pX264Param, "baseline");
 	//==============================================================
 	h=x264_encoder_open(&param);//根据参数初始化X264级别
 	x264_picture_init(&m_picin);//初始化图片信息

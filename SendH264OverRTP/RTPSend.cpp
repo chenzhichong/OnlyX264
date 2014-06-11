@@ -218,7 +218,7 @@ void dump(NALU_t *n)
 
 int main(int argc, char* argv[])
 {
-	OpenBitstreamFile("bridge-close_cif.h264");
+	OpenBitstreamFile("..\\OnlyX264\\20140611203748920_Sequence.h264");
 	NALU_t *n;
 	char* nalu_payload;  
 	char sendbuf[1500];

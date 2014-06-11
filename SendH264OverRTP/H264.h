@@ -9,7 +9,7 @@
 
 #define MAX_RTP_PKT_LENGTH     1400
 
-#define DEST_IP                "127.0.0.1"
+#define DEST_IP                "192.168.1.106"
 #define DEST_PORT				12306
 
 #define H264                    96
