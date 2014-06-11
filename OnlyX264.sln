@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OnlyX264", "OnlyX264\OnlyX264.vcxproj", "{16D8AA23-E52B-4029-9016-CEB2056CACDA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NALDecoder", "NALDecoder\NALDecoder.vcxproj", "{76D02EA6-C423-4A6A-8C16-FD5ED536A109}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SendH264OverRTP", "SendH264OverRTP\SendH264OverRTP.vcxproj", "{E6BB2AA1-6C25-4C74-96DB-9D628FB2BC86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -13,6 +17,14 @@ Global
 		{16D8AA23-E52B-4029-9016-CEB2056CACDA}.Debug|Win32.Build.0 = Debug|Win32
 		{16D8AA23-E52B-4029-9016-CEB2056CACDA}.Release|Win32.ActiveCfg = Release|Win32
 		{16D8AA23-E52B-4029-9016-CEB2056CACDA}.Release|Win32.Build.0 = Release|Win32
+		{76D02EA6-C423-4A6A-8C16-FD5ED536A109}.Debug|Win32.ActiveCfg = Debug|Win32
+		{76D02EA6-C423-4A6A-8C16-FD5ED536A109}.Debug|Win32.Build.0 = Debug|Win32
+		{76D02EA6-C423-4A6A-8C16-FD5ED536A109}.Release|Win32.ActiveCfg = Release|Win32
+		{76D02EA6-C423-4A6A-8C16-FD5ED536A109}.Release|Win32.Build.0 = Release|Win32
+		{E6BB2AA1-6C25-4C74-96DB-9D628FB2BC86}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E6BB2AA1-6C25-4C74-96DB-9D628FB2BC86}.Debug|Win32.Build.0 = Debug|Win32
+		{E6BB2AA1-6C25-4C74-96DB-9D628FB2BC86}.Release|Win32.ActiveCfg = Release|Win32
+		{E6BB2AA1-6C25-4C74-96DB-9D628FB2BC86}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
